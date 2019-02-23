@@ -1,0 +1,59 @@
+.loginBox{
+        background-color:cadetblue;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 35px;
+    width: 280px;
+    height: 280px;
+}
+h2{
+    text-align: center;
+}
+body{
+       /* background-image: url(../assets/photo-1535498730771-e735b998cd64.jpeg); */
+          /* background-image: url(../assets/photo-1535498730771-e735b998cd64.jpeg); */
+    height: 64%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    border: 10px;
+    border-color: black;
+    padding: 0%;
+     
+     
+}
+#submitbtn{
+    background-color: green; /* Green */
+    border: none;
+    color:black;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left:32%;
+    
+}
+
+#from-control{
+    background-color: rgb(229, 228, 235); /* Green */
+    border: none;
+    color:black;
+    padding: 20px 40px;
+    text-align: center;
+    display: flex;
+    margin: 12px 1px 16px 0px;
+    font-size: 16px;
+    border-radius: 20px
+}
+
+.forgotPassword{
+    display: inline;
+    margin-left: -5%;
+}
+.sign{
+    display: initial;
+    margin-left: 42%;
+}
