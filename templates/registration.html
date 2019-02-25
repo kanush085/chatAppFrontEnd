@@ -1,39 +1,54 @@
 <html>
 
 <head>
-        <link rel="stylesheet" href='../css/register.css' type="text/css">
+    <link rel="stylesheet" href='../css/register.css' type="text/css">
     <title>Registration</title>
 </head>
 
 <body>
 
-    <form>
+    <form method="POST" name="form">
 
         <div class="RegistrationForm">
             <h1>Sign Up</h1>
             <div class="text">
                 <label for="firstname"><b>FirstName</b></label>
-                <input type="text" style="text-align: left" placeholder="Enter First Name" name="firstname" required>
+                <input type="text" style="text-align: left" ng-model="firstname" placeholder="Enter First Name" name="firstname"
+                    required>
+                <span style="color:red" ng-show="form.firstname.$touched || form.firstname.$dirty && form.firstname.$invalid">
+                    <span ng-show="form.firstname.$error.required">FirstName is required.</span>
+                </span>
             </div>
             <div class="text">
                 <label for="lastname"><b>LastName</b></label> <br>
-                <input type="text" style="text-align: left" placeholder="Enter Last Name" name="lastname" required>
+                <input type="text" style="text-align: left" ng-model="lastname" placeholder="Enter Last Name" name="lastname"
+                    required>
+                <span style="color:red" ng-show="form.lastname.$touched || form.lastname.$dirty && form.lastname.$invalid">
+                    <span ng-show="form.lastname.$error.required">lastname is required.</span>
+                </span>
             </div>
             <div class="email">
                 <label for="email"><b>Email</b></label>
-                <input type="text" style="text-align: left" placeholder="Enter email" name="email" required>
+                <input type="text" style="text-align: left" ng-model="email" placeholder="Enter email" name="email"
+                    required required pattern="[A-Z]*[a-z]*[0-9]*@gmail.com" required />
+                <span style="color:red" ng-show="form.email.$dirty || form.email.$invalid ">
+                    <span ng-show="form.email.$error.pattern">Email is required.</span>
+                    <span ng-show="form.email.$error.email">Invalid email address.</span>
             </div>
             <div class="password">
                 <label for="psw"><b>Password</b></label><br>
-                <input type="password" style="text-align: left" placeholder="Enter password" name="psw" required>
+                <input type="password" id ="psw" style="text-align: left" placeholder="Enter password" name="psw" ng-model="psw"
+                    ng-required>
+                <span style="color: red" ng-show="form.psw.$touched ||form.psw.$dirty && form.psw.$invalid">Invalid
+                    Password</span>
             </div>
             <div class="password">
                 <label for="psw-repeat"><b>Repeat Password</b></label><br>
-                <input type="password" style="text-align: left" placeholder="Enter repeat password" name="psw" required>
+                <input type="password" style="text-align: left" placeholder="Enter repeat password" name="psw"  pw-check='psw' ng-required>
             </div>
             <div class="cancelbtn">
-                <button type=button id="b1" ui-sref="login">Sign in</button>
-                <button type=button id="b2">Submit</button>
+                <button type="button" id="b1" ui-sref="login">Sign In</button>
+                <button type="submit" id="b2" ng-click="registerUser()">Submit</button>
             </div>
         </div>
     </form>

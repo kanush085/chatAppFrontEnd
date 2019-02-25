@@ -1,32 +1,27 @@
 <body>
     <h2>Login Page</h2>
-    <form>
+    <form method="POST" name="form">
         <div class="loginBox">
             <label for="email"><b>Email</b></label>
-            <input type="email" id="from-control" style="text-align: left" placeholder="Email-id" required>
+            <input type="text" id="from-control" style="text-align: left" ng-model="email" placeholder="Email-id"
+                required required pattern="[A-Z]*[a-z]*[0-9]*@gmail.com" />
+            <span style="color:red" ng-show="form.email.$dirty && form.email.$invalid ">
+                <span ng-show="form.email.$error.email">invalid email address.</span>
+            </span>
             <label for="password"><b>Password</b></label>
-            <input type="password" id="from-control" style="text-align: left" placeholder="Password" required><br>
+            <input type="password" id="from-control" style="text-align: left" ng-model="psw" name ="psw" placeholder="Password"
+                required><br>
+            <span style="color: red" ng-show="form.psw.$touched || form.psw.$dirty && form.psw.$invalid">Invalid
+                Password</span>
             <button id="submitbtn" type="submit" value="log In" ng-click="login()" ng-diable="loginForm.$invalid">LogIn</button><br><br>
 
             <div class="forgotPassword">
-            <a ui-sref="forgotpassword">Forgot Password</a>
+                <a ui-sref="forgotpassword">Forgot Password</a>
             </div>
             <div class="sign">
-             <a ui-sref="register">Sign-up</a>
+                <a ui-sref="register">Sign-up</a>
             </div>
         </div>
     </form>
 </body>
 
-<!-- <p class="help -block" ng-show="loginForm.email.$invalid && loginForm.email.dirty">Invalid email-id</p>
-            <span style="color:darkred" ng-show="post.email.$dirty && post.email.$invalid" class="ng-hide"><br>
-                <span ng-show="post.email.$error.required">Please fill out this field</span>
-                <span ng-show="post.email.$error.email">Enter a valid email address.</span>
-                <span ng-show="post.email.$error.minLength">Enter atleast 3 characters.</span>
-            </span><br> -->
-
-<!-- <span style="color:darkred" ng-show="post.password.$invalid && post.password.$dirty" class="ng-hide"><br>
-                <span ng-show="post.password.$error.required">Please fill out this field</span>
-                <span ng-show="post.password.$error.required">Enter the vaild password</span>
-                <span ng-show="post.password.$error.required">Password length min 3 characters</span>
-            </span><br> -->

@@ -24,7 +24,7 @@ body{
 
 h1{
     text-align: center;
-    margin-left: -10px;
+    margin-left: 22px;
     margin-top: 0%;
 }
 .cancelbtn{
@@ -51,7 +51,7 @@ input{
     height: 45px;
     border-radius: 15px;
     display: flex;
-    padding: 12px 12px;;
+    padding: 6px 2px;
 }
 .password{
     padding: 14px 40px

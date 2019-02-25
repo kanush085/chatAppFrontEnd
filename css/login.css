@@ -1,5 +1,5 @@
 .loginBox{
-        background-color:cadetblue;
+    /* background-color:cadetblue; */
     border: 2px solid;
     border-radius: 30px;
     padding: 35px;
@@ -16,11 +16,11 @@ body{
     background-repeat: no-repeat;
     position: absolute;
     top: 10%;
-    left: 33%;
+    left: 37%;
     border: 10px;
     border-color: black;
     padding: 0%;
-     
+     background-image: url('../assets/dgfhjk.jpg')
      
 }
 #submitbtn{
