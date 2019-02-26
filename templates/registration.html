@@ -44,11 +44,11 @@
             </div>
             <div class="password">
                 <label for="psw-repeat"><b>Repeat Password</b></label><br>
-                <input type="password" style="text-align: left" placeholder="Enter repeat password" name="psw"  pw-check='psw' ng-required>
+                <input type="password" style="text-align: left" placeholder="Enter repeat password" name="psw"  ng-model='repsw' ng-required>
             </div>
             <div class="cancelbtn">
                 <button type="button" id="b1" ui-sref="login">Sign In</button>
-                <button type="submit" id="b2" ng-click="registerUser()">Submit</button>
+                <button type="submit" id="b2" value="register" ng-click="register()">Submit</button>
             </div>
         </div>
     </form>

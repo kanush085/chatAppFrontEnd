@@ -5,18 +5,23 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',
-            // controller: 'controlLogin'
+            controller: 'loginctrl'
         })
         .state('register', {
             url: '/register',
             templateUrl: 'templates/registration.html',
-            // controller: 'controlRegister'
+            controller: 'registerCtrl'
+        })
+        .state('dashBoard',{
+            url:'/dashBoard',
+            templateUrl:'templates/dashBoard.html'
         })
         .state('forgotpassword',{
             url:'/forgotpassword',
             templateUrl:'templates/forgotPassword.html',
+            controller: 'forgotPasswordctrl'
         })
-        .state('resetpassword',{
+        .state('Resetpassword:/token',{
             url:'/resetpassword',
             templateUrl:'templates/resetPassword.html',
         })
