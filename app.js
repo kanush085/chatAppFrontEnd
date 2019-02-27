@@ -21,9 +21,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl:'templates/forgotPassword.html',
             controller: 'forgotPasswordctrl'
         })
-        .state('Resetpassword:/token',{
+        .state('resetpassword/:token',{
             url:'/resetpassword',
             templateUrl:'templates/resetPassword.html',
+            controller:'resetPasswordCtrl'
         })
         $urlRouterProvider.otherwise('/login');
     });

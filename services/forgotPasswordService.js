@@ -6,7 +6,7 @@ app.service('forgotPasswordService',function($http,$location){
             method:'POST',
             url:'http://localhost:3000/forgotpassword',
             data:data
-        }).then(function successCallBacl(response) {
+        }).then(function successCallBack(response) {
             console.log("forgotpassword is successfull");
             // $location.path('dashBoard');
             console.log(response);

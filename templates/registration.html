@@ -39,7 +39,7 @@
                 <label for="psw"><b>Password</b></label><br>
                 <input type="password" id ="psw" style="text-align: left" placeholder="Enter password" name="psw" ng-model="psw"
                     ng-required>
-                <span style="color: red" ng-show="form.psw.$touched ||form.psw.$dirty && form.psw.$invalid">Invalid
+                <span style="color: red" ng-show="form.psw.$touched && form.psw.$dirty && form.psw.$invalid">Invalid
                     Password</span>
             </div>
             <div class="password">
