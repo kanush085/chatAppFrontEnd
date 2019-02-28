@@ -47,11 +47,11 @@ h1{
 
 input{
    
-    width: 250px;
+    width: 274px;
     height: 45px;
-    border-radius: 15px;
+    border-radius: 25px;
     display: flex;
-    padding: 6px 2px;
+    padding: 4px 2px;
 }
 .password{
     padding: 14px 40px

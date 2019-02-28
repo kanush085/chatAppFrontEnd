@@ -1,7 +1,8 @@
 app.controller('registerCtrl', function ($scope, registerService) {
     $scope.register = function () {
-        console.log("dfghjkl");
         
+     if($scope.firstname!=undefined)
+     {
         let data = {
             'firstname': $scope.firstname,
             'lastname': $scope.lastname,
@@ -15,5 +16,9 @@ app.controller('registerCtrl', function ($scope, registerService) {
             console.log('data in controller',data);
             registerService.register(data, $scope);
         }
+     }
+     else{
+        return $scope.firstname= "invalid name";
+     }
     }
 })
