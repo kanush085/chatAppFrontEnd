@@ -1,4 +1,4 @@
-var app = angular.module('chatApp', ['ui.router']);
+var app = angular.module('chatApp', ['ui.router','btford.socket-io']);
 app.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
@@ -14,7 +14,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('dashBoard',{
             url:'/dashBoard',
-            templateUrl:'templates/dashBoard.html'
+            templateUrl:'templates/dashBoard.html',
+            controller:'chatController'
         })
         .state('forgotpassword',{
             url:'/forgotpassword',
@@ -28,3 +29,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         $urlRouterProvider.otherwise('/login');
     });
+
+    app.service('SocketService', ['socketFactory', function SocketService(socketFactory){
+        return socketFactory({
+            ioSocket: io.connect('http://localhost:3000')  
+            /**
+             * connecting socket io
+             */
+        })
+    }])

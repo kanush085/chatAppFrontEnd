@@ -1,13 +1,17 @@
 <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <h2>Login Page</h2>
     <form method="POST" name="form" novalidate>
         <div class="loginBox">
             <label for="email"><b>Email</b></label>
-            <input type="email" id="from-control" style="text-align: left"  name ="email" ng-model="email" placeholder="Email-id" required  required pattern
-            =[A-Z]*[a-z]*[0-9]*@*[gmail].com >
+            <i class="fa fa-fw fa-envelope"></i>
+            <input type="email" id="from-control" style="text-align: left" name="email" ng-model="email" placeholder="Email-id"
+                required required pattern=[A-Z]*[a-z]*[0-9]*@*[gmail].com>
             <span style="color:red" ng-show="form.email.$dirty && form.email.$invalid ">Invalid Email</span><br><br>
             <label for="password"><b>Password</b></label>
-            <input type="password" id="from-control" style="text-align: left" ng-model="psw" name ="psw" placeholder="Password" required pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$/"><br>
+            <i class="fa fa-fw fa-key"></i>
+            <input type="password" id="from-control" style="text-align: left" ng-model="psw" name="psw" placeholder="Password"
+                required pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$/"><br>
             <span style="color: red" ng-show="form.psw.$dirty && form.psw.$invalid">Invalid Password</span>
             <button id="submitbtn" type="submit" value="log In" ng-click="login()">LogIn</button><br><br>
 
@@ -20,4 +24,3 @@
         </div>
     </form>
 </body>
-

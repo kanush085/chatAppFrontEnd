@@ -15,7 +15,6 @@
                 <label for="firstname"><b>FirstName</b></label>
                 <input type="text" style="text-align: left" ng-model="firstname" placeholder="Enter First Name" name="firstname"
                     required>
-                <div ng-bind="firstname"></div>
                 <span style="color:red" ng-show="form.firstname.$touched || form.firstname.$dirty && form.firstname.$invalid">
                     <span ng-show="form.firstname.$error.required">FirstName is required.</span>
                 </span>

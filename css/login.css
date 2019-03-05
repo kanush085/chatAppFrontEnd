@@ -1,13 +1,15 @@
 .loginBox{
-    background-color:cadetblue;
+    background-color: cadetblue;
     border: 2px solid;
     border-radius: 30px;
     padding: 43px;
     width: 280px;
-    height: 297px;
+    height: 297px
 }
 h2{
     text-align: center;
+    color: seashell;
+    font-size: 35px;
 }
 body{
        /* background-image: url(../assets/photo-1535498730771-e735b998cd64.jpeg); */
@@ -56,4 +58,10 @@ body{
 .sign{
     display: initial;
     margin-left: 42%;
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+    margin-left: -33%;
+    margin-left: 0px;
 }

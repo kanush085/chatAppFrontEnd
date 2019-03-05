@@ -1,4 +1,56 @@
-<body>
-    <h2><b>Welcome To ChatApp</b></h2>    
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/dashBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-controller="chatController" class="dashboard">
+    <header>
+        <div class="topnav">
+            <a href="#home" class="active" ui-sref="login">Sign out</a>
+            <div class="donnav" id="mytopnav1">
+                <a class="newchat"><i class="fa fa-fw fa-envelope"></i>New Chat</a>
+                <a class="contact"><i class="fa fa-fw fa-user"></i>Contact</a>
+                <a class="heading">Welcome To ChatApp {{currUserName}} </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <p class="con-list">Contact List</p>
+            </ul>
+            <p ng-repeat="x in allUser" ng-click="person(x)" ng-show="currUserName!=x.firstname">
+                {{x.firstname}}</p>
+        </nav>
+        <article>
+            <div class="groupChat">
+                <p class="userName">{{recieverUserName}}</p>
+            </div>
+            <section>
+                <form>
+                    <div class="chatLogs" ng-repeat="chat in allUserArr">
+                        <div class="chat friend" ng-show="currUser != chat.senderUserId">
+
+                            <p class="chatMsg"> {{chat.message}}</p>
+                        </div>
+                        <div class="chat self" ng-show="currUser == chat.senderUserId">
+                            <p class="chatMsg"> {{chat.message}}</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div>
+                <textarea ng-model="message" ng-keyup="$event.keyCode == 13 &amp;&amp; sendMessage()" class="text"
+                    placeholder="Enter Message...."></textarea>
+                <button type="button" ng-click="sendMessage()" class="sendclick">Send</button>
+            </div>
+
+        </article>
+    </section>
+
+
 </body>
 
+</html>
