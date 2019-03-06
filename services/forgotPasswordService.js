@@ -1,3 +1,13 @@
+/************************************************************
+ * @description
+ * 
+ * @file        :   app.js
+ * @overview    :   To call the forgotPassword templates as on the request .
+ * @author      :   AnushKumar SK <anushk136@gmail.com>
+ * @version     :   1.0
+ * @since       :   06-03-2019
+ * 
+ * **********************************************************/
 app.service('forgotPasswordService', function ($http, $location) {
     this.forgotPassword = function (data, $scope) {
         console.log(data);

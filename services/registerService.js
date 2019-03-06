@@ -1,3 +1,13 @@
+/************************************************************
+ * @description
+ * 
+ * @file        :   app.js
+ * @overview    :   To call the registration templates as on the request .
+ * @author      :   AnushKumar SK <anushk136@gmail.com>
+ * @version     :   1.0
+ * @since       :   06-03-2019
+ * 
+ * **********************************************************/
 app.service('registerService', function ($http, $location) {
     try {
         this.register = function (data, $scope) {

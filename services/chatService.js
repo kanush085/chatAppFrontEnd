@@ -1,3 +1,13 @@
+/************************************************************
+ * @description
+ * 
+ * @file        :   chatService.js
+ * @overview    :   To call the templates as on request.
+ * @author      :   AnushKumar SK <anushk136@gmail.com>
+ * @version     :   1.0
+ * @since       :   06-03-2019
+ * 
+ * **********************************************************/
 app.service('chatServices', function ($http) {
     this.getAllUsers = function ($scope, userToken) {
         try {

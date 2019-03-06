@@ -1,3 +1,13 @@
+/************************************************************
+ * @description
+ * 
+ * @file        :   app.js
+ * @overview    :   To call the templates.
+ * @author      :   AnushKumar SK <anushk136@gmail.com>
+ * @version     :   1.0
+ * @since       :   06-03-2019
+ * 
+ * **********************************************************/
 var app = angular.module('chatApp', ['ui.router','btford.socket-io']);
 app.config(function ($stateProvider, $urlRouterProvider) {
 

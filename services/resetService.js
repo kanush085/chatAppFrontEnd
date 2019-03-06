@@ -1,3 +1,13 @@
+/************************************************************
+ * @description
+ * 
+ * @file        :   app.js
+ * @overview    :   To call the resetPassword templates as on the request .
+ * @author      :   AnushKumar SK <anushk136@gmail.com>
+ * @version     :   1.0
+ * @since       :   06-03-2019
+ * 
+ * **********************************************************/
 app.service('resetPasswordService', function ($http, $location) {
     this.resetPassword = function (data, $scope) {
         console.log(data);
